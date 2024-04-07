@@ -687,6 +687,7 @@ body._hidden {
   }
   .subscription__note {
     font-size: 14px;
+        width: 290px !important;
   }
   .subscription__active {
     font-size: 16px;
