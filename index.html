@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/favicon.ico">
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/iconsfont.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/iconsFont.css"> 
+   <link rel="stylesheet" href="css/style.css">
   <title></title>
 </head>
 
@@ -35,7 +35,7 @@
           <div class="header__mail mail">
             <a href="mailto:falconservise@yandex.ru" class="mail__link"> falconservise@yandex.ru</a>
           </div>
-          <button type="button" class="header__button">Маргарита</button>
+          <button data-record="#popup-authorization" type="button" class="header__button popup-link">Вход</button>
         </div>
         <button type="button" class="icon-menu"><span></span></button>
       </div>
@@ -49,7 +49,7 @@
       <nav class="menu__body">
         <ul class="menu__list">
           <li class="menu__item"><a href="index.html" class="menu__link">Главная</a></li>
-          <li class="menu__item"><a href="" class="menu__link">Проверь себя</a></li>
+          <li class="menu__item"><a href="themes.html" class="menu__link">Проверь себя</a></li>
           <li class="menu__item"><a href="subscription.html" class="menu__link">Подписка</a></li>
           <li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
         </ul>
@@ -58,6 +58,57 @@
   </div>
 
 
+  <!-- Popup -->
+  <div id="popup-authorization" class="popup-authorization popup">
+    <div class="popup-authorization__body">
+      <div class="popup-authorization__content">
+        <!-- можно вставить класс иконки -->
+
+        <div class="popup-authorization__buttons">
+          <button class="popup-authorization__entrance _active">Вход</button>
+          <button class="popup-authorization__registration">Регистрация</button>
+          <a href="#" class="popup-authorization__close close-popup icon-close-1"></a>
+        </div>
+
+
+        <form class="form-entrance" id="form-entrance" name="formEntrance">
+          <input type="text" class="form-entrance__input authorization-input" placeholder="Имя"
+            name="formEntranceInputName" data-focus="focus">
+          <input type="text" class="form-entrance__input authorization-input" placeholder="Пароль"
+            name="formEntranceInputPassword" data-focus="focus">
+          <label for="entrance-chek" class="form-entrance__remember">
+            <input id="entrance-chek" type="checkbox" name="formEntranceInputCheckbox"
+              class="form-entrance__remember-input check-input" data-focus="focus">
+            <span class="form-entrance__remember-ok"></span>
+            <span class="form-entrance__remember-text">Запомнить меня</span>
+          </label>
+
+          <button type="submit" class="form-entrance__but authorization-but">Войти</button>
+          <button class="form-entrance__link-pas">Забыли пароль?</button>
+        </form>
+
+        <form action="#" class="form-registration" id="form-registration" name="formRegistration">
+          <input type="text" class="form-registration-input authorization-input" placeholder="Имя"
+            name="formRegistrationInputName" data-focus="focus">
+          <input type="email" class="form-registration-input authorization-input" placeholder="E-mail"
+            name="formRegistrationInputEmail" data-focus="focus">
+          <input type="text" class="form-registration-input authorization-input" placeholder="Пароль"
+            name="formRegistrationInputPassword" data-focus="focus">
+          <input type="text" class="form-registration-input authorization-input" placeholder="Повторите пароль"
+            name="formRegistrationInputPasswordTwo" data-focus="focus">
+          <button type="submit" class="form-registration__but authorization-but">Зарегистрироваться</button>
+        </form>
+
+        <form action="#" name="form-recovery-password" class="form-recover">
+          <div class="form-recover__wrap">
+            <h1  class="form-recover__title">Восстановление пароля</h1>
+            <p class="form-recover__text">Введите E-mail</p>
+            <input type="text" class="form-recover__input authorization-input">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </header>
 <main class="page">
   <section class="page__one one">
@@ -198,6 +249,7 @@
   </div>
 </footer>  </div>
 
+  <script src="js/popup-authorization.js"></script>
   <script src="js/main.js"></script>
 </body>
 
