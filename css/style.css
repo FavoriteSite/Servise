@@ -379,6 +379,7 @@ body._lock {
   color: #1a1a1a;
   margin-right: 20px;
   font-family: "Inter-Light";
+  background-color: transparent;
 }
 .popup-authorization__entrance._active {
   font-family: "Inter-Medium";
@@ -389,6 +390,7 @@ body._lock {
   color: #1a1a1a;
   margin-right: 20px;
   font-family: "Inter-Light";
+  background-color: transparent;
 }
 .popup-authorization__registration._active {
   font-family: "Inter-Medium";
@@ -543,7 +545,7 @@ body._lock {
     font-size: 22px;
   }
   .form-entrance__remember-text {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1100px) {
@@ -587,6 +589,16 @@ body._lock {
     font-size: 16px;
   }
 }
+@media (max-width: 850px) {
+  .menu {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .menu__link {
+    font-size: 18px;
+    color: #1a1a1a;
+  }
+}
 @media (max-width: 800px) {
   .header__top {
     min-height: 100px;
@@ -594,16 +606,8 @@ body._lock {
   .header__mail {
     display: none;
   }
-  .menu {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
   .menu__item:not(:last-child) {
     margin-right: 50px;
-  }
-  .menu__link {
-    font-size: 18px;
-    color: #1a1a1a;
   }
 }
 @media (max-width: 600px) {

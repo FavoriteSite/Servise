@@ -108,10 +108,8 @@ document.addEventListener('keydown', function (e) {
 });
 
 
-
-
 //////////////////////////////////// 
-// Смена форм решистрации и входа
+// Смена форм регистрации и входа
 const entranceButton = document.querySelector('.popup-authorization__entrance');
 const formEntrance = document.querySelector('.form-entrance');
 const formRecovery = document.querySelector('.form-recover');
@@ -163,22 +161,28 @@ formRegistrationMain.addEventListener('submit', function (event) {
 
   if (inputTextValue == "" || inputTextValue.length <= 2) {
     inputText.classList.add('_error');
+    inputText.style.border = "none";
   }
 
   if (inputEmailValue == "" || inputEmailValue.length <= 5) {
     inputEmail.classList.add('_error');
+    inputEmail.style.border = "none";
   }
 
   if (inputPasswordValue == "" || inputPasswordValue.length <= 2) {
     inputPassword.classList.add('_error');
+    inputPassword.style.border = "none";
   }
 
   if (inputPasswordTwoValue == "") {
     inputPasswordTwo.classList.add('_error');
+    inputPasswordTwo.classList.add('_error');
+    inputPasswordTwo.style.border = "none";
   }
   if (inputPasswordTwoValue != inputPasswordValue) {
     inputPasswordTwo.value = "Пароли не совпадают";
     inputPasswordTwo.classList.add('_error');
+    inputPasswordTwo.style.border = "none";
   }
 });
 
