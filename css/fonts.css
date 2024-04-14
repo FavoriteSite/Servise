@@ -26,7 +26,7 @@
 }
 
 @font-face {
-  font-family: "Inter-Relular";
+  font-family: "Inter-Regular";
   src: url("../fonts/Inter-Regular.woff2") format("woff2"),
     url("../fonts/Inter-Regular.woff") format("woff");
   font-weight: 400;

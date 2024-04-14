@@ -5,6 +5,9 @@ body {
   height: 100%;
   width: 100%;
   line-height: 1;
+  color: #1a1a1a;
+  font-family: "Inter-Regular";
+  font-weight: 400;
 }
 
 html {
@@ -169,7 +172,6 @@ body._hidden {
 }
 
 .menu__link {
-  font-family: "Inter-Relular";
   font-weight: 400;
   font-size: 24px;
   color: #1a1a1a;
@@ -541,7 +543,6 @@ body._lock {
     transition: all 0.5s ease 0s;
   }
   .header__button._active {
-    font-family: "Inter-Relular";
     display: block;
     position: fixed;
     top: 50px;
@@ -605,7 +606,6 @@ body._lock {
 }
 
 .contacts__item-link {
-  font-family: "Inter-Relular";
   font-size: 18px;
   margin-right: 15px;
   color: #1a1a1a;
@@ -618,13 +618,11 @@ body._lock {
 }
 
 .contacts__error-item-name {
-  font-family: "Inter-Relular";
   font-size: 18px;
   color: #1a1a1a;
 }
 
 .contacts__error-item-link {
-  font-family: "Inter-Relular";
   font-size: 18px;
   color: #1a1a1a;
 }
@@ -684,7 +682,6 @@ body._lock {
 }
 
 .footer__social-item-name {
-  font-family: "Inter-Relular";
   color: #1A1A1A;
   font-size: 16px;
   margin-right: 10px;

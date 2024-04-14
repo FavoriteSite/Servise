@@ -221,7 +221,6 @@ body._hidden {
 }
 
 .menu__link {
-  font-family: "Inter-Relular";
   font-weight: 400;
   font-size: 24px;
   color: #1a1a1a;
@@ -630,7 +629,6 @@ body._lock {
     transition: all 0.5s ease 0s;
   }
   .header__button._active {
-    font-family: "Inter-Relular";
     display: block;
     position: fixed;
     top: 50px;
@@ -925,7 +923,6 @@ body._lock {
 }
 
 .footer__social-item-name {
-  font-family: "Inter-Relular";
   color: #1A1A1A;
   font-size: 16px;
   margin-right: 10px;
