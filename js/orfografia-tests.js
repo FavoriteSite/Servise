@@ -24,6 +24,7 @@ function setProgress(persent) {
 setProgress(69);
 
 
+
 //смена блоков при нажатии темы
 const themeLinks = document.querySelectorAll('.spelling__link[data-name]');
 if (themeLinks.length > 0) {
@@ -35,22 +36,30 @@ if (themeLinks.length > 0) {
   function showBlock(e) {
 
     const themeLinkActive = e.currentTarget;
-    console.log(themeLinkActive);
     e.preventDefault();
     if (themeLinkActive.dataset.name && document.querySelector(themeLinkActive.dataset.name)) {
-      const blockItem = document.querySelector(themeLinkActive.dataset.name);
+      const linkItem = document.querySelector(themeLinkActive.dataset.name);
       const blockActive = document.querySelector('.spelling__test._active');
+
+      //подчеркнутая ссылка бокового меню
+      const linkDecoration = document.querySelector('.spelling__link._text-decoration');
 
       if (blockActive) {
         blockActive.classList.remove('_active');
-        blockItem.classList.add('_active');
+        linkItem.classList.add('_active');
+        linkDecoration.classList.remove('_text-decoration');
+        themeLinkActive.classList.add('_text-decoration');
       }
     }
   }
 }
 
-//появление бокового меню при нажатии
+//появление бокового меню при нажатии на мобильных устройствах
 const menuButton = document.querySelector('.spelling__nav');
-menuButton.addEventListener('click', function(e){
+const bodyBlock = document.querySelector('body');
+const blockMenuThemes = document.querySelector('.spelling__nav-wrap');
+menuButton.addEventListener('click', function (e) {
   menuButton.classList.toggle('_active');
+  bodyBlock.classList.toggle('_lock');
+  blockMenuThemes.classList.toggle('_active');
 })
