@@ -60,3 +60,20 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "CrimsonText-Regular";
+  src: url("../fonts/CrimsonText-Regular.woff2") format("woff2"),
+    url("../fonts/CrimsonText-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DancingScript-Regular";
+  src: url("../fonts/DancingScript-Regular.woff2") format("woff2"),
+    url("../fonts/DancingScript-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
