@@ -56,10 +56,8 @@ if (themeLinks.length > 0) {
 
 //появление бокового меню при нажатии на мобильных устройствах
 const menuButton = document.querySelector('.spelling__nav');
-const bodyBlock = document.querySelector('body');
 const blockMenuThemes = document.querySelector('.spelling__nav-wrap');
 menuButton.addEventListener('click', function (e) {
   menuButton.classList.toggle('_active');
-  bodyBlock.classList.toggle('_lock');
   blockMenuThemes.classList.toggle('_active');
 })
