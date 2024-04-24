@@ -713,6 +713,7 @@ body._lock {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
+  color: #2D2A2A;
 }
 
 .book__word {

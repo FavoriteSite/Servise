@@ -670,7 +670,7 @@ body._lock {
 .spelling__nav {
   max-width: 310px;
   padding: 30px;
-  background-color: rgba(140, 204, 110, 0.8);
+  background-color: #C9E7D3;
   border-radius: 20px;
   margin-right: 40px;
 }
@@ -758,7 +758,7 @@ body._lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(140, 204, 110, 0.3);
+  background-color: #C9E7D3;
   border-radius: 20px;
   padding: 10px;
 }
