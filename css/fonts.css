@@ -69,6 +69,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "DancingScript-Regular";
   src: url("../fonts/DancingScript-Regular.woff2") format("woff2"),

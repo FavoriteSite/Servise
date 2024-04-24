@@ -670,13 +670,13 @@ body._lock {
 .spelling__nav {
   max-width: 310px;
   padding: 30px;
-  background-color: #C9E7D3;
+  background-color: rgba(5, 151, 116, 0.2);
   border-radius: 20px;
   margin-right: 40px;
 }
 
 .spelling__title {
-  font-size: 24px;
+  font-size: 20px;
   color: #1A1A1A;
   font-family: "Inter-Medium";
   margin-bottom: 30px;
@@ -758,7 +758,7 @@ body._lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #C9E7D3;
+  background-color: rgba(5, 151, 116, 0.2);
   border-radius: 20px;
   padding: 10px;
 }
@@ -1067,7 +1067,6 @@ body._lock {
     margin-bottom: 50px;
   }
   .spelling__title {
-    font-size: 20px;
     font-family: "Inter-Regular";
     margin-bottom: 20px;
   }
