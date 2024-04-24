@@ -1,14 +1,14 @@
-const card = document.querySelectorAll('#one-rule');
-console.log(card);
-const cards = card.childredn;
-console.log(card);
-const cardsTotalText = document.querySelector('.card__num-total');
-// console.log(cardsTotalText);
-// console.log(cards);
-// if (cards.length > 0) {
-  // for (let i = 0; i < cards.length; i++) {
-    // const card = cards[i];
-    // const cardsLength = cards.length;
-    // console.log(cardsLength);
-  // }
-// }
+const cards = document.querySelectorAll('.card[data-card]');
+
+//  изменение количества карточек (задание 5 из 30)
+let counter = 0;
+const practiceBlock = document.querySelector('.practice');
+for (const i of cards) {
+  counter++;
+  const numCard = i.querySelector('.card__num-one');
+  const numCardTotal = i.querySelector('.card__num-total');
+  if (numCard || numCardTotal) {
+    numCard.innerHTML = counter;
+    numCardTotal.innerHTML = cards.length;
+  }
+}
