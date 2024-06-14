@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/iconsFont.css">
+  <link rel="stylesheet" href="css/orfografia-test.css">
+  <title>Орфография</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+<header class="header">
+
+  <div class="header__content">
+    <div class="container">
+      <div class="header__top">
+        <div class="header__logo logo">
+          <div class="logo__img">
+            <img src="img/logo.svg" alt="Cокол">
+          </div>
+          <div class="logo__text">
+            <h3 class="logo__name">СОКОЛ</h3>
+            <p class="logo__slogan">Пишем грамотно</p>
+          </div>
+        </div>
+        <div class="header__text">
+          <div class="header__slogan slogan">СЕРВИС ПРОВЕРКИ ЗНАНИЙ
+            РУССКОГО ЯЗЫКА</div>
+          <div class="header__mail mail">
+            <a href="mailto:falconservise@yandex.ru" class="mail__link"> falconservise@yandex.ru</a>
+          </div>
+          <button data-record="#popup-authorization" type="button" class="header__button popup-link">Вход</button>
+        </div>
+        <button type="button" class="icon-menu"><span></span></button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="header__menu menu">
+    <div class="container">
+      <nav class="menu__body">
+        <ul class="menu__list">
+          <li class="menu__item"><a href="index.html" class="menu__link">Главная</a></li>
+          <li class="menu__item"><a href="themes.html" class="menu__link">Проверь себя</a></li>
+          <li class="menu__item"><a href="account.html" class="menu__link">Теоретический материал</a></li>
+          <li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
+  <!-- Popup -->
+  <div id="popup-authorization" class="popup-authorization popup">
+    <div class="popup-authorization__body">
+      <div class="popup-authorization__content">
+        <!-- можно вставить класс иконки -->
+
+        <div class="popup-authorization__buttons">
+          <button class="popup-authorization__entrance _active">Вход</button>
+          <button class="popup-authorization__registration">Регистрация</button>
+          <a href="#" class="popup-authorization__close close-popup icon-close-1"></a>
+        </div>
+
+
+        <form class="form-entrance" id="form-entrance" name="formEntrance">
+          <input type="text" class="form-entrance__input authorization-input" placeholder="Имя"
+            name="formEntranceInputName" data-focus="focus">
+          <input type="text" class="form-entrance__input authorization-input" placeholder="Пароль"
+            name="formEntranceInputPassword" data-focus="focus">
+          <label for="entrance-chek" class="form-entrance__remember">
+            <input id="entrance-chek" type="checkbox" name="formEntranceInputCheckbox"
+              class="form-entrance__remember-input check-input" data-focus="focus">
+            <span class="form-entrance__remember-ok"></span>
+            <span class="form-entrance__remember-text">Запомнить меня</span>
+          </label>
+
+          <button type="submit" class="form-entrance__but authorization-but">Войти</button>
+          <button class="form-entrance__link-pas">Забыли пароль?</button>
+        </form>
+
+        <form action="#" class="form-registration" id="form-registration" name="formRegistration">
+          <input type="text" class="form-registration-input authorization-input" placeholder="Имя"
+            name="formRegistrationInputName" data-focus="focus">
+          <input type="email" class="form-registration-input authorization-input" placeholder="E-mail"
+            name="formRegistrationInputEmail" data-focus="focus">
+          <input type="text" class="form-registration-input authorization-input" placeholder="Пароль"
+            name="formRegistrationInputPassword" data-focus="focus">
+          <input type="text" class="form-registration-input authorization-input" placeholder="Повторите пароль"
+            name="formRegistrationInputPasswordTwo" data-focus="focus">
+          <label for="registration-chek" class="form-registration__remember">
+            <input id="registration-chek" type="checkbox" name="formRegistrationInputCheckbox"
+              class="form-registration__remember-input check-input" data-focus="focus">
+            <span class="form-registration__remember-ok"></span>
+            <span class="form-registration__remember-text">Я подтверждаю, что ознакомился с <a href=""
+                target="_blank">Пользовательским соглашением</a>, <a href="" target="_blank" >Политикой обработки
+                персональных данных</a> и даю <a href="" target="_blank">Согласие на обработку персональных
+                данных</a></span>
+          </label>
+          <button type="submit" class="form-registration__but authorization-but">Зарегистрироваться</button>
+        </form>
+
+        <form action="#" name="form-recovery-password" class="form-recover">
+          <div class="form-recover__wrap">
+            <h1 class="form-recover__title">Восстановление пароля</h1>
+            <p class="form-recover__text">Введите E-mail</p>
+            <input type="text" class="form-recover__input authorization-input">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+    <main class="page">
+      <section class="page__test test">
+        <div class="container">
+
+          <div class="test__content">
+            <div class="test__rule rule">
+              <h1 class="rule__title">Правописание безударных гласных в корнях слов</h1>
+              <h2 class="rule__subtitle">Корни с чередующимися гласными</h2>
+              <p class="rule__text">В корнях бер - бир, дер - дир, мер - мир, пер - пир, тер - тир, блест - блист, жег -
+                жиг, стел - стил, чет - чит пишется буква <span>и</span> если за корнем следует суффикс <span>а</span>,
+                в остальных случаях
+                пишется буква <span>е</span>.</p>
+              <div class="rule__block">
+                <h2 class="rule__block-title">Например:</h2>
+                <div class="rule__block-items">
+                  <p class="rule__block-item">прибирать - приберу</p>
+                  <p class="rule__block-item">расстилать - расстелить</p>
+                </div>
+              </div>
+              <div class="rule__block">
+                <h2 class="rule__block-title">Исключения:</h2>
+                <div class="rule__block-items">
+                  <p class="rule__block-item">чета, сочетать, сочетание, словосочетание, бракосочетание.</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="test__practice practice" id="one-rule">
+
+              <div class="practice__card card" data-card="card-test">
+                <div class="card__text">Задание<span class="card__num card__num-one">1</span>из<span
+                    class="card__num card__num-total">30</span>
+                </div>
+                <div class="card__content">
+                  <div class="card__left">
+                    <div class="card__test-wrap">
+                      <p class="card__word">Приб<span class="card__word-empty">...</span>рать
+                      </p>
+                      <div class="card__input-wrap">
+                        <input class="card__input" name="name-answer">
+                        <p class="card__input-note">Впишите слово с заглавной буквы</p>
+                      </div>
+                    </div>
+                    <button class="card__button" data-button="but">Далее</button>
+                  </div>
+                  <div class="card__right">
+                    <div class="card__right-items">
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">1</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">2</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">3</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">4</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">5</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">6</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">7</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">8</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">9</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">10</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                    </div>
+                    <div class="card__right-items">
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">11</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">12</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">13</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">14</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">15</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">16</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">17</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">18</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">19</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">20</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                    </div>
+                    <div class="card__right-items">
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">21</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">22</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">23</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">24</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">25</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">26</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">27</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">28</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">29</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">30</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="practice__card card" data-card="card-test">
+                <div class="card__text">Задание<span class="card__num card__num-one">1</span>из<span
+                    class="card__num card__num-total">30</span>
+                </div>
+                <div class="card__content">
+                  <div class="card__left">
+                    <div class="card__test-wrap">
+                      <p class="card__question">Выберите правильный вариант ответа</p>
+                      <div class="card__answer-items">
+                        <label for="question-one" class="card__answer-item">
+                          <input id="question-one" type="radio" name="name-one" class="card__answer-input">
+                          <span class="card__answer-input-ok"></span>
+                          <p class="card__answer-text">Выберите правильный вариант ответа</p>
+                        </label>
+                        <label for="question-two" class="card__answer-item">
+                          <input id="question-two" type="radio" name="name-one" class="card__answer-input">
+                          <span class="card__answer-input-ok"></span>
+                          <p class="card__answer-text">Выберите правильный вариант ответа</p>
+                        </label>
+                        <label for="question-three" class="card__answer-item">
+                          <input id="question-three" checked type="radio" name="name-one" class="card__answer-input">
+                          <span class="card__answer-input-ok"></span>
+                          <p class="card__answer-text">Выберите правильный вариант ответа</p>
+                        </label>
+                        <label for="question-four" class="card__answer-item">
+                          <input id="question-four" type="radio" name="name-one" class="card__answer-input">
+                          <span class="card__answer-input-ok"></span>
+                          <p class="card__answer-text">Выберите правильный вариант ответа</p>
+                        </label>
+                      </div>
+                    </div>
+                    <button class="card__button" data-button="but">Далее</button>
+                  </div>
+                  <div class="card__right">
+                    <div class="card__right-items">
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">1</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">2</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">3</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">4</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">5</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">6</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">7</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">8</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">9</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">10</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                    </div>
+                    <div class="card__right-items">
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">11</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">12</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">13</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">14</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">15</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">16</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">17</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">18</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">19</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">20</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                    </div>
+                    <div class="card__right-items">
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">21</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">22</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">23</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">24</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">25</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">26</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">27</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">28</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">29</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">30</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="practice__card card" data-card="card-test">
+                <div class="card__text">Задание<span class="card__num card__num-one">1</span>из<span
+                    class="card__num card__num-total">30</span>
+                </div>
+                <div class="card__content">
+                  <div class="card__left">
+                    <div class="card__test-wrap">
+                      <p class="card__answer">Верно ли утверждение, что написание корней -бер-бир Верно ли
+                        утверждение,
+                        что написание корней -бер-бир Верно ли утверждение, что написание корней -бер-бир</p>
+                    </div>
+                    <div class="card__answer-buttons">
+                      <button class="card__answer-button" data-button="but">Верно</button>
+                      <button class="card__answer-button" data-button="but">Неверно</button>
+                    </div>
+                  </div>
+                  <div class="card__right">
+                    <div class="card__right-items">
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">1</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">2</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">3</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">4</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">5</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">6</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">7</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">8</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">9</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">10</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                    </div>
+                    <div class="card__right-items">
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">11</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">12</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">13</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">14</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">15</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">16</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">17</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">18</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">19</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">20</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                    </div>
+                    <div class="card__right-items">
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">21</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">22</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">23</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">24</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">25</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">26</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">27</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">28</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">29</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                      <div class="card__right-item">
+                        <p class="card__right-item-number">30</p>
+                        <p class="card__right-item-symbol icon-ok"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+              <div class="practice__card card card-result">
+                <div class="card-result__wrap">
+                  <h4 class="card-result__title">Ваш результат</h4>
+                  <div class="card-result__number">100%</div>
+                </div>
+
+                <div class="card__right">
+                  <div class="card__right-items">
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">1</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">2</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">3</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">4</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">5</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">6</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">7</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">8</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">9</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">10</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                  </div>
+                  <div class="card__right-items">
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">11</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">12</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">13</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">14</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">15</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">16</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">17</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">18</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">19</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">20</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                  </div>
+                  <div class="card__right-items">
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">21</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">22</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">23</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">24</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">25</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">26</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">27</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">28</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">29</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                    <div class="card__right-item">
+                      <p class="card__right-item-number">30</p>
+                      <p class="card__right-item-symbol icon-ok"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+
+
+
+
+          </div>
+
+        </div>
+
+      </section>
+    </main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__content">
+
+      <div class="footer__logo logo">
+        <div class="logo__img">
+          <img src="img/logo.svg" alt="Cокол">
+        </div>
+        <div class="logo__text">
+          <h3 class="logo__name black">СОКОЛ</h3>
+          <p class="logo__slogan black">Пишем грамотно</p>
+        </div>
+      </div>
+
+      <div class="footer__social">
+        <div class="footer__social-item">
+          <p class="footer__social-item-name">E-mail:</p>
+          <a href="mailto:falconservise@yandex.ru" class="footer__social-item-link link">falconservise@yandex.ru</a>
+        </div>
+        <div class="footer__social-item">
+          <p class="footer__social-item-name">VK:</p>
+          <a href="http://vk.me/sokolservise" class="footer__social-item-link link">sokolservise</a>
+        </div>
+        <div class="footer__social-item">
+          <p class="footer__social-item-name">Telegram:</p>
+          <a href="http://t.me/sokolservise" class="footer__social-item-link link">t.me/sokolservise</a>
+        </div>
+      </div>
+
+      <div class="footer__elements">
+        <div class="footer__element">
+          <a href="" class="footer__element-link link" target="_blank">Оферта</a>
+          <a href="" class="footer__element-link link" target="_blank">Политика обработки персональных данных</a>
+          <a href="" class="footer__element-link link" target="_blank">Согласие на обработку персональных данных</a>
+          <a href="" class="footer__element-link link" target="_blank">Пользовательское соглашение</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>  </div>
+
+  <script src="js/popup-authorization.js"></script>
+  <script src="js/orfografia-test.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -8,128 +8,22 @@
   <link rel="shortcut icon" href="img/favicon.ico">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/iconsFont.css">
-  <link rel="stylesheet" href="css/ss-test.css">
-  <title>Словарные слова</title>
+  <link rel="stylesheet" href="css/orthoepy-test.css">
+  <title>Орфоэпия</title>
 </head>
 
 <body>
 
   <div class="wrapper">
-<header class="header">
+    <!-- @import "header.html" -->
 
-  <div class="header__content">
-    <div class="container">
-      <div class="header__top">
-        <div class="header__logo logo">
-          <div class="logo__img">
-            <img src="img/logo.svg" alt="Cокол">
-          </div>
-          <div class="logo__text">
-            <h3 class="logo__name">СОКОЛ</h3>
-            <p class="logo__slogan">Пишем грамотно</p>
-          </div>
-        </div>
-        <div class="header__text">
-          <div class="header__slogan slogan">СЕРВИС ПРОВЕРКИ ЗНАНИЙ
-            РУССКОГО ЯЗЫКА</div>
-          <div class="header__mail mail">
-            <a href="mailto:falconservise@yandex.ru" class="mail__link"> falconservise@yandex.ru</a>
-          </div>
-          <button data-record="#popup-authorization" type="button" class="header__button popup-link">Вход</button>
-        </div>
-        <button type="button" class="icon-menu"><span></span></button>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="header__menu menu">
-    <div class="container">
-      <nav class="menu__body">
-        <ul class="menu__list">
-          <li class="menu__item"><a href="index.html" class="menu__link">Главная</a></li>
-          <li class="menu__item"><a href="themes.html" class="menu__link">Проверь себя</a></li>
-          <li class="menu__item"><a href="account.html" class="menu__link">Теоретический материал</a></li>
-          <li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-
-
-  <!-- Popup -->
-  <div id="popup-authorization" class="popup-authorization popup">
-    <div class="popup-authorization__body">
-      <div class="popup-authorization__content">
-        <!-- можно вставить класс иконки -->
-
-        <div class="popup-authorization__buttons">
-          <button class="popup-authorization__entrance _active">Вход</button>
-          <button class="popup-authorization__registration">Регистрация</button>
-          <a href="#" class="popup-authorization__close close-popup icon-close-1"></a>
-        </div>
-
-
-        <form class="form-entrance" id="form-entrance" name="formEntrance">
-          <input type="text" class="form-entrance__input authorization-input" placeholder="Имя"
-            name="formEntranceInputName" data-focus="focus">
-          <input type="text" class="form-entrance__input authorization-input" placeholder="Пароль"
-            name="formEntranceInputPassword" data-focus="focus">
-          <label for="entrance-chek" class="form-entrance__remember">
-            <input id="entrance-chek" type="checkbox" name="formEntranceInputCheckbox"
-              class="form-entrance__remember-input check-input" data-focus="focus">
-            <span class="form-entrance__remember-ok"></span>
-            <span class="form-entrance__remember-text">Запомнить меня</span>
-          </label>
-
-          <button type="submit" class="form-entrance__but authorization-but">Войти</button>
-          <button class="form-entrance__link-pas">Забыли пароль?</button>
-        </form>
-
-        <form action="#" class="form-registration" id="form-registration" name="formRegistration">
-          <input type="text" class="form-registration-input authorization-input" placeholder="Имя"
-            name="formRegistrationInputName" data-focus="focus">
-          <input type="email" class="form-registration-input authorization-input" placeholder="E-mail"
-            name="formRegistrationInputEmail" data-focus="focus">
-          <input type="text" class="form-registration-input authorization-input" placeholder="Пароль"
-            name="formRegistrationInputPassword" data-focus="focus">
-          <input type="text" class="form-registration-input authorization-input" placeholder="Повторите пароль"
-            name="formRegistrationInputPasswordTwo" data-focus="focus">
-          <label for="registration-chek" class="form-registration__remember">
-            <input id="registration-chek" type="checkbox" name="formRegistrationInputCheckbox"
-              class="form-registration__remember-input check-input" data-focus="focus">
-            <span class="form-registration__remember-ok"></span>
-            <span class="form-registration__remember-text">Я подтверждаю, что ознакомился с <a href=""
-                target="_blank">Пользовательским соглашением</a>, <a href="" target="_blank" >Политикой обработки
-                персональных данных</a> и даю <a href="" target="_blank">Согласие на обработку персональных
-                данных</a></span>
-          </label>
-          <button type="submit" class="form-registration__but authorization-but">Зарегистрироваться</button>
-        </form>
-
-        <form action="#" name="form-recovery-password" class="form-recover">
-          <div class="form-recover__wrap">
-            <h1 class="form-recover__title">Восстановление пароля</h1>
-            <p class="form-recover__text">Введите E-mail</p>
-            <input type="text" class="form-recover__input authorization-input">
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</header>
     <main class="page">
       <section class="page__card">
         <div class="container">
           <div class="card">
             <div class="card__left">
-              <div class="card__word">Аб..р..в..атура</div>
-              <div class="card__buttons">
-                <button class="card__button">б</button>
-                <button class="card__button">_</button>
-              </div>
-              <div class="card__but">Далее</div>
+              <div class="card__word">Кор<span>о</span>ва</div>
+              <button class="card__button">Далее</button>
             </div>
             <div class="card__right">
               <div class="card__right-items">
@@ -401,46 +295,8 @@
       </section>
     </main>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer__content">
-
-      <div class="footer__logo logo">
-        <div class="logo__img">
-          <img src="img/logo.svg" alt="Cокол">
-        </div>
-        <div class="logo__text">
-          <h3 class="logo__name black">СОКОЛ</h3>
-          <p class="logo__slogan black">Пишем грамотно</p>
-        </div>
-      </div>
-
-      <div class="footer__social">
-        <div class="footer__social-item">
-          <p class="footer__social-item-name">E-mail:</p>
-          <a href="mailto:falconservise@yandex.ru" class="footer__social-item-link link">falconservise@yandex.ru</a>
-        </div>
-        <div class="footer__social-item">
-          <p class="footer__social-item-name">VK:</p>
-          <a href="http://vk.me/sokolservise" class="footer__social-item-link link">sokolservise</a>
-        </div>
-        <div class="footer__social-item">
-          <p class="footer__social-item-name">Telegram:</p>
-          <a href="http://t.me/sokolservise" class="footer__social-item-link link">t.me/sokolservise</a>
-        </div>
-      </div>
-
-      <div class="footer__elements">
-        <div class="footer__element">
-          <a href="" class="footer__element-link link" target="_blank">Оферта</a>
-          <a href="" class="footer__element-link link" target="_blank">Политика обработки персональных данных</a>
-          <a href="" class="footer__element-link link" target="_blank">Согласие на обработку персональных данных</a>
-          <a href="" class="footer__element-link link" target="_blank">Пользовательское соглашение</a>
-        </div>
-      </div>
-    </div>
+    <!-- @import "footer.html" -->
   </div>
-</footer>  </div>
   <script src="js/popup-authorization.js"></script>
   <script src="js/main.js"></script>
 </body>

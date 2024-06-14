@@ -1,0 +1,194 @@
+// Основные стили 
+html,
+body {
+  font-weight: 400;
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  color: #1a1a1a;
+  font-family: "Inter-Regular";
+  font-weight: 400;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: 1820px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+
+body._hidden {
+  overflow: hidden;
+}
+
+
+@import "header";
+
+
+.page {
+  padding: 0 0 40px;
+}
+
+.page__contacts {}
+
+.contacts {}
+
+.contacts__content {}
+
+.contacts__links {
+  margin-bottom: 70px;
+
+  >*:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.contacts__item {
+  display: flex;
+}
+
+.contacts__item-name {
+  font-family: "Inter-Medium";
+  font-size: 18px;
+  margin-right: 15px;
+}
+
+.contacts__item-link {
+  font-size: 18px;
+  margin-right: 15px;
+  color: #1a1a1a;
+  font-family: "Inter-Light";
+}
+
+
+.contacts__error-text {
+  font-family: "Inter-Medium";
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+@import "footer";
+
+@media(min-width: 1100px) {
+  .link:hover {
+    text-decoration: underline;
+  }
+}
+
+@media(max-width: 1920px) {
+  .contacts {}
+}
+
+@media(max-width: 1920px) {
+  .contacts {
+    padding-left: 330px;
+  }
+}
+
+@media(max-width: 1440px) {
+  .contacts {
+    padding-left: 310px;
+  }
+}
+
+@media(max-width: 1024px) {
+  .contacts {
+    padding-left: 100px;
+  }
+}
+
+@media(max-width: 768px) {
+  .contacts {
+    padding-left: 110px;
+  }
+}
+
+@media(max-width: 600px) {
+  .page {
+    padding: 40px 0;
+  }
+
+  .contacts {
+    padding-left: 0px;
+  }
+
+  .contacts__error-text {
+    font-size: 16px;
+  }
+
+
+  .contacts__links {
+    margin-bottom: 40px;
+
+    >*:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .contacts__item-name {
+    font-size: 16px;
+    margin-right: 15px;
+  }
+
+  .contacts__item-link {
+    font-size: 16px;
+  }
+
+  .contacts__error-item-name {
+    font-size: 16px;
+  }
+
+  .contacts__error-item-link {
+    font-size: 16px;
+  }
+
+}

@@ -46,11 +46,6 @@ function popupOpen(curentPopup) {
       bodyLock();
     }
     curentPopup.classList.add('open');
-    curentPopup.addEventListener('click', function (e) {
-      if (!e.target.closest('.popup-authorization__content')) {
-        popupClose(e.target.closest('.popup'));
-      }
-    });
   }
 }
 
@@ -150,6 +145,7 @@ const inputText = formRegistrationMain.formRegistrationInputName;
 const inputEmail = formRegistrationMain.formRegistrationInputEmail;
 const inputPassword = formRegistrationMain.formRegistrationInputPassword;
 const inputPasswordTwo = formRegistrationMain.formRegistrationInputPasswordTwo;
+const inputChek = formRegistrationMain.formRegistrationInputCheckbox;
 
 formRegistrationMain.addEventListener('submit', function (event) {
   event.preventDefault();
@@ -157,7 +153,7 @@ formRegistrationMain.addEventListener('submit', function (event) {
   let inputEmailValue = inputEmail.value;
   let inputPasswordValue = inputPassword.value;
   let inputPasswordTwoValue = inputPasswordTwo.value;
-
+  let inputChekValue = inputChek.value;
 
   if (inputTextValue == "" || inputTextValue.length <= 2) {
     inputText.classList.add('_error');
@@ -183,6 +179,10 @@ formRegistrationMain.addEventListener('submit', function (event) {
     inputPasswordTwo.value = "Пароли не совпадают";
     inputPasswordTwo.classList.add('_error');
     inputPasswordTwo.style.border = "none";
+  }
+
+  if (inputChekValue.checked == false){
+
   }
 });
 

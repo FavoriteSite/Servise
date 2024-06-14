@@ -22,7 +22,7 @@
       <div class="header__top">
         <div class="header__logo logo">
           <div class="logo__img">
-            <img src="img/logo.png" alt="Cокол">
+            <img src="img/logo.svg" alt="Cокол">
           </div>
           <div class="logo__text">
             <h3 class="logo__name">СОКОЛ</h3>
@@ -50,7 +50,7 @@
         <ul class="menu__list">
           <li class="menu__item"><a href="index.html" class="menu__link">Главная</a></li>
           <li class="menu__item"><a href="themes.html" class="menu__link">Проверь себя</a></li>
-          <li class="menu__item"><a href="subscription.html" class="menu__link">Подписка</a></li>
+          <li class="menu__item"><a href="account.html" class="menu__link">Теоретический материал</a></li>
           <li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
         </ul>
       </nav>
@@ -96,12 +96,21 @@
             name="formRegistrationInputPassword" data-focus="focus">
           <input type="text" class="form-registration-input authorization-input" placeholder="Повторите пароль"
             name="formRegistrationInputPasswordTwo" data-focus="focus">
+          <label for="registration-chek" class="form-registration__remember">
+            <input id="registration-chek" type="checkbox" name="formRegistrationInputCheckbox"
+              class="form-registration__remember-input check-input" data-focus="focus">
+            <span class="form-registration__remember-ok"></span>
+            <span class="form-registration__remember-text">Я подтверждаю, что ознакомился с <a href=""
+                target="_blank">Пользовательским соглашением</a>, <a href="" target="_blank" >Политикой обработки
+                персональных данных</a> и даю <a href="" target="_blank">Согласие на обработку персональных
+                данных</a></span>
+          </label>
           <button type="submit" class="form-registration__but authorization-but">Зарегистрироваться</button>
         </form>
 
         <form action="#" name="form-recovery-password" class="form-recover">
           <div class="form-recover__wrap">
-            <h1  class="form-recover__title">Восстановление пароля</h1>
+            <h1 class="form-recover__title">Восстановление пароля</h1>
             <p class="form-recover__text">Введите E-mail</p>
             <input type="text" class="form-recover__input authorization-input">
           </div>
@@ -113,9 +122,12 @@
     <main class="page">
       <section class="page__themes themes">
         <div class="themes__items">
-          <a href="voina-i-mir.html" class="themes__item-link">
+          <a href="lit-pro-test.html" class="themes__item-link">
             <div class="themes__item">
-              <h1 class="themes__title">Война и мир</h1>
+              <div class="themes__author">
+                <h1 class="themes__title">Война и мир</h1>
+                <h2 class="themes__subtitle">Л.Н. Толстой</h2>
+              </div>
               <div class="themes__img">
                 <img src="img/stylus.svg" alt="Орфография">
               </div>
@@ -124,7 +136,10 @@
 
           <a href="" class="themes__item-link">
             <div class="themes__item">
-              <h1 class="themes__title">Евгений Онегин</h1>
+              <div class="themes__author">
+                <h1 class="themes__title">Евгений Онегин</h1>
+                <h2 class="themes__subtitle">А.С. Пушкин</h2>
+              </div>
               <div class="themes__img">
                 <img src="img/stylus.svg" alt="Орфография">
               </div>
@@ -139,13 +154,13 @@
   <div class="container">
     <div class="footer__content">
 
-      <div class="footer__logo footer-logo">
-        <div class="footer-logo__img">
-          <img src="img/logo.png" alt="Cокол">
+      <div class="footer__logo logo">
+        <div class="logo__img">
+          <img src="img/logo.svg" alt="Cокол">
         </div>
-        <div class="footer-logo__text">
-          <h3 class="footer-logo__name">СОКОЛ</h3>
-          <p class="footer-logo__slogan">Пишем грамотно</p>
+        <div class="logo__text">
+          <h3 class="logo__name black">СОКОЛ</h3>
+          <p class="logo__slogan black">Пишем грамотно</p>
         </div>
       </div>
 
@@ -156,23 +171,20 @@
         </div>
         <div class="footer__social-item">
           <p class="footer__social-item-name">VK:</p>
-          <a href="" class="footer__social-item-link link"></a>
+          <a href="http://vk.me/sokolservise" class="footer__social-item-link link">sokolservise</a>
         </div>
         <div class="footer__social-item">
           <p class="footer__social-item-name">Telegram:</p>
-          <a href="" class="footer__social-item-link link" ></a>
+          <a href="http://t.me/sokolservise" class="footer__social-item-link link">t.me/sokolservise</a>
         </div>
       </div>
 
       <div class="footer__elements">
         <div class="footer__element">
-          <a href="" class="footer__element-link link">Договор оферты </a>
-          <a href="" class="footer__element-link link">Политика обработки персональных данных</a>
-          <a href="" class="footer__element-link link">Пользовательское соглашение</a>
-        </div>
-        <div class="footer__element-img">
-          <p class="footer__element-img-text">Представленные на сайте изображения от</p>
-          <a href="www.freepik.com" class="footer__element-img-link link">www.freepik.com</a>
+          <a href="" class="footer__element-link link" target="_blank">Оферта</a>
+          <a href="" class="footer__element-link link" target="_blank">Политика обработки персональных данных</a>
+          <a href="" class="footer__element-link link" target="_blank">Согласие на обработку персональных данных</a>
+          <a href="" class="footer__element-link link" target="_blank">Пользовательское соглашение</a>
         </div>
       </div>
     </div>
