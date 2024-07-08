@@ -1,6 +1,5 @@
-// ссылки при нажатии на которые открывается попап с таким классом
+
 const popupLinks = document.querySelectorAll('.popup-link');
-//  тег body для блокировки скролла при открытом попапе
 const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll(".lock-padding");
 let unlock = true;
@@ -31,12 +30,6 @@ if (popupCloseIcon.length > 0) {
   }
 }
 
-// получаем открытый попап и если он существует, его закрываем и у боди блокируем скролл
-// далее попап, который передали (curentPopup) открываем и вешаем собитие при клике, чтобы закрылся попап только на темную область
-//   if (!e.target.closest('.popup__content')) - если при клике на что-то у родителя нет такого класса т.е. это оболочка
-// при клике на которую он заркывается 
-// если я нажму на обект у которого есть родитель с клаасом .popup__content, то он не закроется, потому что стоит !знак НЕ
-//  то есть закроется при нажатие на блоки с классами .popup__body и  .popup
 function popupOpen(curentPopup) {
   if (curentPopup && unlock) {
     const popupActive = document.querySelector('.popup.open');
@@ -58,7 +51,6 @@ function popupClose(popupActive, doUnlock = true) {
   }
 }
 
-// высчитывание ширины скролла, чтобы его скрывать при открытии попапа
 function bodyLock() {
   const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
   if (lockPadding.length > 0) {
@@ -94,7 +86,6 @@ function bodyUnLock() {
   }, timeout);
 }
 
-//  закрытие по esc
 document.addEventListener('keydown', function (e) {
   if (e.which === 27) {
     const popupActive = document.querySelector('.popup.open');
@@ -103,7 +94,6 @@ document.addEventListener('keydown', function (e) {
 });
 
 
-//////////////////////////////////// 
 // Смена форм регистрации и входа
 const entranceButton = document.querySelector('.popup-authorization__entrance');
 const formEntrance = document.querySelector('.form-entrance');
@@ -135,10 +125,9 @@ formRecovery.addEventListener('click', function (e) {
   formEntrance.classList.add('_active');
 })
 
-/////////
-// валидация формы
 
-// получаем форму РЕГИСТРАЦИИ по имени
+
+// валидация формы  РЕГИСТРАЦИЯ
 const formRegistrationMain = document.forms.formRegistration;
 
 const inputText = formRegistrationMain.formRegistrationInputName;
@@ -147,48 +136,49 @@ const inputPassword = formRegistrationMain.formRegistrationInputPassword;
 const inputPasswordTwo = formRegistrationMain.formRegistrationInputPasswordTwo;
 const inputChek = formRegistrationMain.formRegistrationInputCheckbox;
 
+const textError = document.querySelector('.form-registration-error');
 formRegistrationMain.addEventListener('submit', function (event) {
   event.preventDefault();
   let inputTextValue = inputText.value;
   let inputEmailValue = inputEmail.value;
   let inputPasswordValue = inputPassword.value;
   let inputPasswordTwoValue = inputPasswordTwo.value;
-  let inputChekValue = inputChek.value;
 
-  if (inputTextValue == "" || inputTextValue.length <= 2) {
+  if (inputTextValue.length <= 2) {
     inputText.classList.add('_error');
     inputText.style.border = "none";
   }
 
-  if (inputEmailValue == "" || inputEmailValue.length <= 5) {
+  if (inputEmailValue.length <= 5) {
     inputEmail.classList.add('_error');
     inputEmail.style.border = "none";
   }
 
-  if (inputPasswordValue == "" || inputPasswordValue.length <= 2) {
+  if (inputPasswordValue.length <= 6) {
     inputPassword.classList.add('_error');
     inputPassword.style.border = "none";
   }
 
   if (inputPasswordTwoValue == "") {
     inputPasswordTwo.classList.add('_error');
-    inputPasswordTwo.classList.add('_error');
     inputPasswordTwo.style.border = "none";
   }
+
   if (inputPasswordTwoValue != inputPasswordValue) {
-    inputPasswordTwo.value = "Пароли не совпадают";
+    textError.style.opacity = "1";
+    inputPassword.classList.add('_error');
     inputPasswordTwo.classList.add('_error');
-    inputPasswordTwo.style.border = "none";
+  }
+  if (inputPasswordTwoValue == inputPasswordValue) {
+    textError.style.opacity = "0";
   }
 
-  if (inputChekValue.checked == false){
-
+  if (inputChek.checked == false) {
   }
 });
 
-// получаем все поля с дата атрибутом data-focus
-// для всех форм с дата атрибутом data-focus
-const focus = document.querySelectorAll('.authorization-input[data-focus]');
+////////////////////
+const focus = document.querySelectorAll('[data-focus]');
 if (focus.length > 0) {
   for (let i = 0; i < focus.length; i++) {
     const inputNum = focus[i];
@@ -203,4 +193,31 @@ if (focus.length > 0) {
       inputNum.placeholder = inputPlasceholder;
     });
   };
+}
+
+
+
+/////////////////////////////
+const inputPasswords = document.querySelectorAll('[data-pass]');
+
+
+if (inputPasswords.length > 0) {
+  for (let i = 0; i < inputPasswords.length; i++) {
+    const inputPassword = inputPasswords[i];
+    let nextSibling = inputPassword.nextElementSibling;
+    let firstChild = nextSibling.firstElementChild;
+    let lastChild = nextSibling.lastElementChild;
+    nextSibling.addEventListener('click', function (e) {
+      if (inputPassword.getAttribute('type') == 'password') {
+        inputPassword.setAttribute('type', 'text');
+        firstChild.classList.add('_active');
+        lastChild.classList.add('_active');
+      }
+      else {
+        firstChild.classList.remove('_active');
+        lastChild.classList.remove('_active');
+        inputPassword.setAttribute('type', 'password');
+      }
+    })
+  }
 }

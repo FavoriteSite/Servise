@@ -26,11 +26,11 @@
           </div>
           <div class="logo__text">
             <h3 class="logo__name">СОКОЛ</h3>
-            <p class="logo__slogan">Пишем грамотно</p>
+            <p class="logo__slogan">Выше к знаниям</p>
           </div>
         </div>
         <div class="header__text">
-          <div class="header__slogan slogan">СЕРВИС ПРОВЕРКИ ЗНАНИЙ
+          <div class="header__slogan slogan"> СЕРВИС ПРОВЕРКИ ЗНАНИЙ
             РУССКОГО ЯЗЫКА</div>
           <div class="header__mail mail">
             <a href="mailto:falconservise@yandex.ru" class="mail__link"> falconservise@yandex.ru</a>
@@ -62,7 +62,6 @@
   <div id="popup-authorization" class="popup-authorization popup">
     <div class="popup-authorization__body">
       <div class="popup-authorization__content">
-        <!-- можно вставить класс иконки -->
 
         <div class="popup-authorization__buttons">
           <button class="popup-authorization__entrance _active">Вход</button>
@@ -71,41 +70,59 @@
         </div>
 
 
-        <form class="form-entrance" id="form-entrance" name="formEntrance">
+        <form class="form-entrance" id="form-entrance" name="formEntranceMain">
           <input type="text" class="form-entrance__input authorization-input" placeholder="Имя"
             name="formEntranceInputName" data-focus="focus">
-          <input type="text" class="form-entrance__input authorization-input" placeholder="Пароль"
-            name="formEntranceInputPassword" data-focus="focus">
-          <label for="entrance-chek" class="form-entrance__remember">
-            <input id="entrance-chek" type="checkbox" name="formEntranceInputCheckbox"
-              class="form-entrance__remember-input check-input" data-focus="focus">
-            <span class="form-entrance__remember-ok"></span>
-            <span class="form-entrance__remember-text">Запомнить меня</span>
+          <div class="block-eye">
+            <input type="password" class="form-entrance__input authorization-input" placeholder="Пароль"
+              name="formEntranceInputPassword" data-focus="focus" data-pass="password">
+            <div class="block-eye__images">
+              <img src="img/svg/eye-slash.svg" alt="Скрыть пароль" class="block-eye__img-eye-slash" data-img="imgPass">
+              <img src="img/svg/eye.svg" alt="Показать пароль" class="block-eye__img-eye" data-img="imgPass">
+            </div>
+          </div>
+          <label for="entrance-chek" class="checkbox-label">
+            <input id="entrance-chek" type="checkbox" name="formEntranceInputCheckbox" class="checkbox-input">
+            <span class="checkbox-ok"></span>
+            <span class="chekbox-text">Запомнить меня</span>
           </label>
 
-          <button type="submit" class="form-entrance__but authorization-but">Войти</button>
+          <button type="submit" class="authorization-but">Войти</button>
           <button class="form-entrance__link-pas">Забыли пароль?</button>
         </form>
 
         <form action="#" class="form-registration" id="form-registration" name="formRegistration">
-          <input type="text" class="form-registration-input authorization-input" placeholder="Имя"
-            name="formRegistrationInputName" data-focus="focus">
-          <input type="email" class="form-registration-input authorization-input" placeholder="E-mail"
-            name="formRegistrationInputEmail" data-focus="focus">
-          <input type="text" class="form-registration-input authorization-input" placeholder="Пароль"
-            name="formRegistrationInputPassword" data-focus="focus">
-          <input type="text" class="form-registration-input authorization-input" placeholder="Повторите пароль"
-            name="formRegistrationInputPasswordTwo" data-focus="focus">
-          <label for="registration-chek" class="form-registration__remember">
-            <input id="registration-chek" type="checkbox" name="formRegistrationInputCheckbox"
-              class="form-registration__remember-input check-input" data-focus="focus">
-            <span class="form-registration__remember-ok"></span>
-            <span class="form-registration__remember-text">Я подтверждаю, что ознакомился с <a href=""
-                target="_blank">Пользовательским соглашением</a>, <a href="" target="_blank" >Политикой обработки
-                персональных данных</a> и даю <a href="" target="_blank">Согласие на обработку персональных
+          <input type="text" class="authorization-input" placeholder="Имя" name="formRegistrationInputName"
+            data-focus="focus">
+          <input type="email" class="authorization-input" placeholder="E-mail" name="formRegistrationInputEmail"
+            data-focus="focus">
+          <div class="block-eye">
+            <div class="form-registration-placeholder">Не менее 6 символов</div>
+            <input type="password" class="authorization-input" placeholder="Пароль" name="formRegistrationInputPassword"
+              data-focus="focus" data-pass="password">
+            <div class="block-eye__images">
+              <img src="img/svg/eye-slash.svg" alt="Скрыть пароль" class="block-eye__img-eye-slash" data-img="imgPass">
+              <img src="img/svg/eye.svg" alt="Показать пароль" class="block-eye__img-eye" data-img="imgPass">
+            </div>
+          </div>
+          <div class="block-eye">
+            <div class="form-registration-error">Пароли не совпадают</div>
+            <input type="password" class="authorization-input" placeholder="Повторите пароль"
+              name="formRegistrationInputPasswordTwo" data-focus="focus" data-pass="password">
+            <div class="block-eye__images">
+              <img src="img/svg/eye-slash.svg" alt="Скрыть пароль" class="block-eye__img-eye-slash" data-img="imgPass">
+              <img src="img/svg/eye.svg" alt="Показать пароль" class="block-eye__img-eye" data-img="imgPass">
+            </div>
+          </div>
+          <label for="registration-chek" class="checkbox-label">
+            <input id="registration-chek" type="checkbox" name="formRegistrationInputCheckbox" class="checkbox-input">
+            <span class="checkbox-ok" data-pass="password"></span>
+            <span class="chekbox-text">Я подтверждаю, что ознакомился с <a href="user agreement.docx"
+                target="_blank">Пользовательским соглашением</a>, <a href="personal-data-processing-policy.docx" target="_blank">Политикой обработки
+                персональных данных</a> и даю <a href="consent-processing-of-personal-data.docx" target="_blank">Согласие на обработку персональных
                 данных</a></span>
           </label>
-          <button type="submit" class="form-registration__but authorization-but">Зарегистрироваться</button>
+          <button type="submit" class="authorization-but">Зарегистрироваться</button>
         </form>
 
         <form action="#" name="form-recovery-password" class="form-recover">
@@ -407,7 +424,7 @@
         </div>
         <div class="logo__text">
           <h3 class="logo__name black">СОКОЛ</h3>
-          <p class="logo__slogan black">Пишем грамотно</p>
+          <p class="logo__slogan black">Выше к знаниям</p>
         </div>
       </div>
 
@@ -428,10 +445,13 @@
 
       <div class="footer__elements">
         <div class="footer__element">
-          <a href="" class="footer__element-link link" target="_blank">Оферта</a>
-          <a href="" class="footer__element-link link" target="_blank">Политика обработки персональных данных</a>
-          <a href="" class="footer__element-link link" target="_blank">Согласие на обработку персональных данных</a>
-          <a href="" class="footer__element-link link" target="_blank">Пользовательское соглашение</a>
+          <a href="documents/offer.docx" class="footer__element-link link" target="_blank">Оферта</a>
+          <a href="personal-data-processing-policy.docx" class="footer__element-link link" target="_blank">Политика
+            обработки персональных данных</a>
+          <a href="consent-processing-of-personal-data.docx" class="footer__element-link link" target="_blank">Согласие
+            на обработку персональных данных</a>
+          <a href="user agreement.docx" class="footer__element-link link" target="_blank">Пользовательское
+            соглашение</a>
         </div>
       </div>
     </div>
