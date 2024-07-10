@@ -727,6 +727,10 @@ body._lock {
     font-size: 20px;
   }
 }
+.page {
+  padding-bottom: 50px;
+}
+
 .rule {
   max-width: 700px;
   padding: 30px;
@@ -1032,7 +1036,7 @@ body._lock {
           justify-content: space-between;
 }
 
-.card-result__wrap {
+.card-result__inner {
   text-align: center;
 }
 
@@ -1279,6 +1283,9 @@ body._lock {
   }
   .card__right > *:not(:last-child) {
     margin-right: 30px;
+  }
+  .card-result__inner {
+    margin-bottom: 30px;
   }
   .card-result {
     padding-top: 30px;

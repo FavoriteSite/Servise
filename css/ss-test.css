@@ -732,6 +732,21 @@ body._lock {
 }
 
 .card {
+  max-width: 700px;
+  margin: 0px auto;
+  padding: 50px;
+  background-color: rgba(241, 198, 163, 0.2);
+  border-radius: 20px;
+}
+
+.card__text {
+  font-family: "Inter-LightItalic";
+  font-size: 20px;
+  color: #696A6D;
+  margin-bottom: 50px;
+}
+
+.card__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -741,11 +756,6 @@ body._lock {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 700px;
-  margin: 0px auto;
-  padding: 50px;
-  background-color: rgba(241, 198, 163, 0.2);
-  border-radius: 20px;
 }
 
 .card__left {
@@ -858,7 +868,7 @@ body._lock {
           justify-content: space-between;
 }
 
-.card-result__wrap {
+.card-result__inner {
   text-align: center;
 }
 
@@ -993,11 +1003,19 @@ body._lock {
     padding-top: 50px;
   }
   .card {
+    padding: 50px 30px 30px;
+  }
+  .card__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 50px 30px 30px;
+  }
+  .card__result {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .card__left {
     margin-right: 0px;
@@ -1023,5 +1041,22 @@ body._lock {
   }
   .icon-ok {
     font-size: 10px;
+  }
+  .card-result {
+    padding-top: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card-result__inner {
+    margin-bottom: 30px;
+  }
+  .card-result__title {
+    font-size: 25px;
+    margin-bottom: 40px;
+  }
+  .card-result__number {
+    font-size: 36px;
   }
 }
