@@ -330,21 +330,21 @@ body._lock {
 
 .popup.open .popup__content {
   -webkit-transform: translateY(0);
-  transform: translateY(0);
+          transform: translateY(0);
   opacity: 1;
 }
 
 .popup-authorization__body {
-  height: 100%;
+  padding-top: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
 }
@@ -653,6 +653,9 @@ body._lock {
     font-size: 18px;
     color: #1a1a1a;
   }
+  .checkbox-input:checked + .checkbox-ok::after {
+    font-size: 16px;
+  }
 }
 @media (max-width: 800px) {
   .header__mail {
@@ -660,6 +663,9 @@ body._lock {
   }
   .menu__item:not(:last-child) {
     margin-right: 50px;
+  }
+  .form-registration-placeholder {
+    font-size: 10px;
   }
 }
 @media (max-width: 600px) {

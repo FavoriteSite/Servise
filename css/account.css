@@ -336,21 +336,21 @@ body._lock {
 
 .popup.open .popup__content {
   -webkit-transform: translateY(0);
-  transform: translateY(0);
+          transform: translateY(0);
   opacity: 1;
 }
 
 .popup-authorization__body {
-  height: 100%;
+  padding-top: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
 }
@@ -659,6 +659,9 @@ body._lock {
     font-size: 18px;
     color: #1a1a1a;
   }
+  .checkbox-input:checked + .checkbox-ok::after {
+    font-size: 16px;
+  }
 }
 @media (max-width: 800px) {
   .header__mail {
@@ -666,6 +669,9 @@ body._lock {
   }
   .menu__item:not(:last-child) {
     margin-right: 50px;
+  }
+  .form-registration-placeholder {
+    font-size: 10px;
   }
 }
 @media (max-width: 600px) {
@@ -814,53 +820,6 @@ body._lock {
 
 .subscription__text-block-button > *:not(:last-child) {
   margin-bottom: 20px;
-}
-
-.checkbox-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.checkbox-input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  border: 0;
-  padding: 0;
-  margin: -1px;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.checkbox-ok {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border: 1px #3A5EA5 solid;
-  border-radius: 2px;
-  background-color: transparent;
-}
-
-.checkbox-input:checked + .checkbox-ok::after {
-  content: "✔";
-  position: absolute;
-  top: 0;
-  left: 1px;
-  font-size: 20px;
-  color: #3A5EA5;
-}
-
-.chekbox-text {
-  font-size: 14px;
-  color: #1a1a1a;
-  margin-left: 30px;
-}
-
-.chekbox-text a {
-  font-size: 14px;
-  color: #1a1a1a;
-  text-decoration: underline;
 }
 
 .form-recover {
