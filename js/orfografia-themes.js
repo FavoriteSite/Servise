@@ -13,6 +13,7 @@ if (themeLinks.length > 0) {
     if (themeLinkActive.dataset.name && document.querySelector(themeLinkActive.dataset.name)) {
       const linkItem = document.querySelector(themeLinkActive.dataset.name);
       const blockActive = document.querySelector('.spelling__test._active');
+      const gotoBlockValue = blockActive.getBoundingClientRect().top + window.pageYOffset;
 
       //подчеркнутая ссылка бокового меню
       const linkDecoration = document.querySelector('.spelling__link._text-decoration');
@@ -23,6 +24,18 @@ if (themeLinks.length > 0) {
         linkDecoration.classList.remove('_text-decoration');
         themeLinkActive.classList.add('_text-decoration');
       }
+
+    
+      const mainElement = document.documentElement;
+      const mainElementWidth = mainElement.clientWidth;
+
+      if (mainElementWidth <= 768) {
+        window.scrollTo({
+          top: gotoBlockValue,
+          behavior: "smooth"
+        });
+      }
     }
   }
 }
+

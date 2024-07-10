@@ -50,6 +50,7 @@
         <ul class="menu__list">
           <li class="menu__item"><a href="index.html" class="menu__link">Главная</a></li>
           <li class="menu__item"><a href="themes.html" class="menu__link">Проверь себя</a></li>
+          <li class="menu__item"><a href="account.html" class="menu__link">Проверь себя</a></li>
           <li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
         </ul>
       </nav>
@@ -180,7 +181,7 @@
               <div class="subscription__form-title">Изменение пароля</div>
               <div class="block-eye">
                 <input type="password" name="password" id="subscription__account-password"
-                  class="subscription__form-input" data-pass="password" placeholder="Текущий пароль">
+                  class="subscription__form-input" data-pass="password" data-focus="focus" placeholder="Текущий пароль">
                 <div class="block-eye__images">
                   <img src="img/svg/eye-slash.svg" alt="Скрыть пароль" class="block-eye__img-eye-slash"
                     data-img="imgPass">
@@ -189,7 +190,7 @@
               </div>
               <div class="block-eye">
                 <input type="password" name="passwordNew" id="subscription__account-password-new"
-                  class="subscription__form-input" data-pass="password" placeholder="Новый пароль">
+                  class="subscription__form-input" data-pass="password" data-focus="focus"  placeholder="Новый пароль">
                 <div class="block-eye__images">
                   <img src="img/svg/eye-slash.svg" alt="Скрыть пароль" class="block-eye__img-eye-slash"
                     data-img="imgPass">
@@ -201,11 +202,11 @@
 
             <form name="deleteAccount" class="subscription__form">
               <div class="subscription__form-title">Удаление аккаунта</div>
-              <input type="email" name="email" id="subscription__account-email" class="subscription__form-input"
+              <input type="email" name="email" data-focus="focus" id="subscription__account-email" class="subscription__form-input"
                 placeholder="Email">
               <div class="block-eye">
                 <input type="password" name="password" id="subscription__account-delete-password"
-                  class="subscription__form-input" data-pass="password" placeholder="Пароль">
+                  class="subscription__form-input" data-pass="password" data-focus="focus"  placeholder="Пароль">
                 <div class="block-eye__images">
                   <img src="img/svg/eye-slash.svg" alt="Скрыть пароль" class="block-eye__img-eye-slash"
                     data-img="imgPass">
@@ -264,7 +265,6 @@
   </div>
 </footer>  </div>
   <script src="js/popup-authorization.js"></script>
-  <script src="js/show-password.js"></script>
   <script src="js/main.js"></script>
 </body>
 
