@@ -735,50 +735,13 @@ body._lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.spelling__nav {
-  max-width: 310px;
-  padding: 30px;
-  background-color: rgba(87, 149, 205, 0.2);
-  border-radius: 20px;
-  margin-right: 40px;
-}
-
-.spelling__title {
-  font-size: 20px;
-  color: #1A1A1A;
-  font-family: "Inter-Medium";
-  margin-bottom: 30px;
-  font-weight: 500;
-}
-
-.spelling__menu {
-  max-width: 200px;
-}
-
-.spelling__list > *:not(:last-child) {
-  margin-bottom: 25px;
-}
-
-.spelling__link {
-  font-size: 18px;
-  color: #1A1A1A;
-  line-height: 120%;
-}
-
-.spelling__link._text-decoration {
-  text-decoration: underline;
-}
-
-.spelling__test {
-  display: none;
-}
-.spelling__test._active {
-  display: block;
+.spelling__test:not(:last-child) {
+  margin-bottom: 50px;
 }
 
 .spelling__test-title {
@@ -788,26 +751,22 @@ body._lock {
   font-weight: 400;
 }
 
-.spelling__test-item-elements {
+.spelling__test-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 1120px;
+  width: 1110px;
 }
 
-.spelling__test-item-element {
+.spelling__test-item {
   margin-right: 30px;
   margin-bottom: 30px;
   cursor: pointer;
 }
 
-.spelling__test-item-element:nth-child(3n) {
-  margin-right: 0px;
-}
-
-.spelling__test-item-element:last-child {
+.spelling__test-item:last-child {
   margin-bottom: 0px;
 }
 
@@ -983,22 +942,13 @@ body._lock {
   .link:hover {
     text-decoration: underline;
   }
-  .spelling__link:hover {
-    text-decoration: underline;
-  }
-  .spelling__test-item-element:hover .name-element__text {
+  .spelling__test-item:hover .name-element__text {
     text-decoration: underline;
   }
 }
 @media (max-width: 1600px) {
-  .spelling__test-item-elements {
-    width: 710px;
-  }
-  .spelling__test-item-element:nth-child(3n) {
-    margin-right: 30px;
-  }
-  .spelling__test-item-element:nth-child(2n) {
-    margin-right: 0px;
+  .spelling__test-items {
+    width: 770px;
   }
 }
 @media (max-width: 1100px) {
@@ -1006,10 +956,10 @@ body._lock {
     font-size: 20px;
     margin-bottom: 35px;
   }
-  .spelling__test-item-elements {
-    width: 570px;
+  .spelling__test-items {
+    width: 602px;
   }
-  .spelling__test-item-element {
+  .spelling__test-items {
     margin-right: 30px;
     margin-bottom: 30px;
   }
@@ -1046,36 +996,6 @@ body._lock {
     font-size: 14px;
   }
 }
-@media (max-width: 950px) {
-  .spelling__content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .spelling__nav {
-    max-width: 1000px;
-    margin-right: 0px;
-    margin-bottom: 50px;
-  }
-  .spelling__title {
-    font-family: "Inter-Regular";
-    margin-bottom: 20px;
-  }
-  .spelling__menu {
-    max-width: 800px;
-  }
-  .spelling__list > *:not(:last-child) {
-    margin-bottom: 10px;
-  }
-  .spelling__link {
-    font-size: 16px;
-    font-family: "Inter-Light";
-  }
-}
 @media (max-width: 850px) {
   .spelling__test-title {
     font-size: 18px;
@@ -1083,18 +1003,23 @@ body._lock {
   }
 }
 @media (max-width: 700px) {
-  .spelling__test-item-elements {
+  .spelling__test {
     width: 270px;
+    margin: 0px auto;
   }
-  .spelling__test-item-element:nth-child(3n) {
-    margin-right: 0px;
+  .spelling__test:not(:last-child) {
+    margin-bottom: 30px;
   }
-  .spelling__test-item-element:nth-child(1n) {
+  .spelling__test-items {
+    width: 270px;
+    margin: 0px auto;
+  }
+  .spelling__test-item {
     margin-right: 0px;
   }
 }
 @media (max-width: 600px) {
-  .spelling {
-    padding-top: 50px;
+  .page {
+    padding: 30px 0px 30px;
   }
 }
