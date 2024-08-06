@@ -1000,8 +1000,12 @@ body._lock {
   }
 }
 @media (max-width: 600px) {
+  .card {
+    padding: 20px;
+  }
   .card__word {
     margin-bottom: 70px;
+    text-align: center;
   }
   .card__right > *:not(:last-child) {
     margin-right: 30px;

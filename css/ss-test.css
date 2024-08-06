@@ -1023,6 +1023,9 @@ body._lock {
   }
 }
 @media (max-width: 600px) {
+  .card {
+    padding: 20px;
+  }
   .card__word {
     margin-bottom: 70px;
   }
