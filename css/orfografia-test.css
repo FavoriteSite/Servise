@@ -907,7 +907,7 @@ body._lock {
   position: absolute;
   width: 20px;
   height: 20px;
-  border: 1px #D37C54 solid;
+  border: 1px solid #D37C54;
   background-color: transparent;
   border-radius: 20px;
 }
@@ -922,10 +922,10 @@ body._lock {
   position: absolute;
   background-color: #D37C54;
   border-radius: 20px;
-  width: 19px;
-  height: 19px;
-  top: 0;
-  left: 0;
+  width: 12px;
+  height: 12px;
+  top: 20%;
+  left: 20%;
 }
 
 .card__answer {

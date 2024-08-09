@@ -762,6 +762,13 @@ body._lock {
   margin-right: 20px;
 }
 
+.card__question {
+  font-family: "Inter-Light";
+  font-size: 16px;
+  margin-bottom: 40px;
+  line-height: 130%;
+}
+
 .card__word {
   font-family: "Inter-Light";
   font-size: 24px;
@@ -816,8 +823,7 @@ body._lock {
   font-family: "Inter-Medium";
   border-radius: 10px;
   cursor: pointer;
-  margin-bottom: 0;
-  margin-top: auto;
+  margin: 0 auto;
 }
 
 .card__right {
