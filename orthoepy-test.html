@@ -113,12 +113,19 @@
               <img src="img/svg/eye.svg" alt="Показать пароль" class="block-eye__img-eye" data-img="imgPass">
             </div>
           </div>
-          <label for="registration-chek" class="checkbox-label">
-            <input id="registration-chek" type="checkbox" name="formRegistrationInputCheckbox" class="checkbox-input">
+          <label for="registration-chek-one" class="checkbox-label">
+            <input id="registration-chek-one" type="checkbox" name="formRegistrationInputCheckboxOne" class="checkbox-input">
             <span class="checkbox-ok" data-pass="password"></span>
             <span class="chekbox-text">Я подтверждаю, что ознакомился с <a href="user agreement.docx"
-                target="_blank">Пользовательским соглашением</a>, <a href="personal-data-processing-policy.docx" target="_blank">Политикой обработки
-                персональных данных</a> и даю <a href="consent-processing-of-personal-data.docx" target="_blank">Согласие на обработку персональных
+                target="_blank">Пользовательским соглашением</a>, <a href="personal-data-processing-policy.docx"
+                target="_blank">Политикой обработки
+                персональных данных</a></span>
+          </label>
+          <label for="registration-chek-two" class="checkbox-label">
+            <input id="registration-chek-two" type="checkbox" name="formRegistrationInputCheckboxTwo" class="checkbox-input">
+            <span class="checkbox-ok" data-pass="password"></span>
+            <span class="chekbox-text">Я даю <a href="consent-processing-of-personal-data.docx"
+                target="_blank">Согласие на обработку персональных
                 данных</a></span>
           </label>
           <button type="submit" class="authorization-but">Зарегистрироваться</button>
@@ -138,7 +145,16 @@
     <main class="page">
       <section class="page__card">
         <div class="container">
-          
+          <div class="quote">
+            <div class="quote__img">
+              <img src="img/st-gold-left.svg" alt="img">
+            </div>
+            <div class="quote__text">
+              <div class="quote__words">" Наша речь лучше всякого паспорта определяет личность любого из нас ".</div>
+              <div class="quote__author">Корней Чуковский</div>
+            </div>
+
+          </div>
           <div class="card" data-card="card-test">
             <div class="card__text">Задание <span class="card__num card__num-one">1 </span> из <span
                 class="card__num card__num-total">30</span>
@@ -281,10 +297,10 @@
           </div>
 
           <div class="card card-result">
-              <div class="card-result__inner">
-                <h4 class="card-result__title">Ваш результат</h4>
-                <div class="card-result__number">100%</div>
-              </div>
+            <div class="card-result__inner">
+              <h4 class="card-result__title">Ваш результат</h4>
+              <div class="card-result__number">100%</div>
+            </div>
             <div class="card__right">
               <div class="card__right-items">
                 <div class="card__right-item">
