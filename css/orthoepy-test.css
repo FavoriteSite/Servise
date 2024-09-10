@@ -1025,6 +1025,9 @@ body._lock {
   .card__word {
     cursor: pointer;
   }
+  .card__button {
+    cursor: pointer;
+  }
 }
 @media (max-width: 800px) {
   .page {
@@ -1063,7 +1066,6 @@ body._lock {
     padding: 20px;
   }
   .card__word {
-    text-align: center;
     margin-bottom: 15px;
   }
   .card__right > *:not(:last-child) {
