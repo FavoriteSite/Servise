@@ -731,9 +731,84 @@ body._lock {
   padding-bottom: 50px;
 }
 
-.card {
+.rule {
+  max-width: 700px;
+  padding: 30px;
+  background-color: rgba(215, 124, 51, 0.2);
+  border-radius: 20px;
+  margin: 0px auto 50px;
+}
+
+.rule__title {
+  font-size: 22px;
+  font-family: "Inter-Medium";
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.rule__subtitle {
+  font-size: 18px;
+  font-family: "Inter-Light";
+  margin-bottom: 40px;
+  position: relative;
+}
+.rule__subtitle::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #C7A073;
+}
+
+.rule__text {
+  font-size: 16px;
+  font-family: "Inter-Regular";
+  margin-bottom: 20px;
+  line-height: 130%;
+}
+.rule__text span {
+  color: #CC2323;
+  font-family: "Inter-MediumItalic";
+}
+
+.rule__block:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.rule__block-title {
+  font-size: 18px;
+  font-family: "Inter-Medium";
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.rule__block-item {
+  font-size: 16px;
+  font-family: "Inter-Regular";
+  line-height: 130%;
+}
+.rule__block-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.test__practice {
   max-width: 700px;
   margin: 0px auto;
+}
+
+.practice > *:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.practice__card {
+  margin: 0px auto;
+}
+
+.card {
+  max-width: 700px;
+  min-height: 400px;
   padding: 50px;
   background-color: rgba(241, 198, 163, 0.2);
   border-radius: 20px;
@@ -759,55 +834,150 @@ body._lock {
 }
 
 .card__left {
-  margin-right: 20px;
-}
-
-.card__question {
-  font-family: "Inter-Light";
-  font-size: 16px;
-  margin-bottom: 40px;
-  line-height: 130%;
-}
-
-.card__word {
-  font-family: "Inter-Light";
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.card__buttons {
-  text-align: center;
-  margin-bottom: 50px;
-}
-.card__buttons > *:not(:last-child) {
   margin-right: 30px;
 }
 
-.card__but {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+.card__test-wrap {
+  margin-bottom: 50px;
+}
+
+.card__num {
+  padding: 0px 8px;
+}
+
+.card__word {
+  font-family: "Inter-Regular";
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+.card__input {
+  width: 250px;
+  height: 40px;
+  background-color: #f5f5f5;
+  border: 1px solid #D37C54;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+  font-size: 16px;
+  font-family: "Inter-Light";
+}
+
+.card__input:focus {
+  outline: 1px solid #D37C54;
+}
+
+.card__input-note {
+  font-size: 14px;
+}
+
+.card__question {
+  font-size: 16px;
+  font-family: "Inter-Medium";
+  margin-bottom: 35px;
+  line-height: 130%;
+  max-width: 290px;
+}
+
+.card__answer-items > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.card__answer-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__answer-input {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.card__answer-input-ok {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  background-color: transparent;
+  border: 1px solid #D37C54;
+  border-radius: 50%;
+  margin-right: 15px;
+  vertical-align: text-top;
+}
+
+.card__answer-text {
+  font-size: 16px;
+}
+
+.card__answer-input-ok::before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #D37C54;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  display: none;
+}
+
+.card__answer-input:checked + .card__answer-input-ok::before {
+  display: block;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.card__answer {
+  font-size: 16px;
+  margin-bottom: 35px;
+  line-height: 130%;
+  max-width: 290px;
+}
+
+.card__answer-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.card__answer-buttons > *:not(:last-child) {
+  margin-right: 20px;
+}
+
+.card__answer-button {
+  background-color: transparent;
+  width: 100px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 80px;
-  height: 40px;
-  align-items: center;
-  font-size: 20px;
-  border: 1px solid #B94F25;
-  border-radius: 5px;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #D37C54;
   padding: 10px;
-  background-color: transparent;
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  color: #f5f5f5;
 }
 
 .card__button {
-  width: 160px;
+  width: 200px;
   min-height: 45px;
   background-color: #D37C54;
   display: -webkit-box;
@@ -824,7 +994,8 @@ body._lock {
   color: #f5f5f5;
   font-family: "Inter-Medium";
   border-radius: 10px;
-  margin: 0 auto;
+  margin-bottom: 0;
+  margin-top: auto;
 }
 
 .card__right {
@@ -1004,49 +1175,60 @@ body._lock {
   .link:hover {
     text-decoration: underline;
   }
-  .card__but:hover {
+  .card__button {
     cursor: pointer;
   }
-  .card__button:hover {
+  .card__answer-button {
     cursor: pointer;
   }
 }
-@media (max-width: 800px) {
-  .page {
+@media (max-width: 700px) {
+  .test {
     padding-top: 50px;
   }
-  .card {
-    padding: 50px 30px 30px;
+  .rule {
+    padding: 20px;
+    margin: 0px auto 50px;
   }
-  .card__content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .rule__title {
+    font-size: 18px;
+    margin-bottom: 20px;
   }
-  .card__result {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .rule__subtitle {
+    font-size: 16px;
+  }
+  .rule__block:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .rule__block-title {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .rule__block-item {
+    font-size: 14px;
   }
   .card__left {
-    margin-right: 0px;
-    margin-bottom: 50px;
-  }
-}
-@media (max-width: 600px) {
-  .card {
-    padding: 20px;
-  }
-  .card__word {
-    margin-bottom: 70px;
-  }
-  .card__buttons > *:not(:last-child) {
     margin-right: 20px;
   }
+  .card__text {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  .card__test-wrap {
+    margin-bottom: 50px;
+  }
+  .card__word {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .card__button {
+    width: 150px;
+    min-height: 40px;
+    padding: 10px;
+    font-size: 16px;
+  }
   .card__right > *:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 20px;
   }
   .card__right-item {
     width: 40px;
@@ -1058,15 +1240,57 @@ body._lock {
   .icon-ok {
     font-size: 10px;
   }
+  .card__input {
+    width: 200px;
+  }
+  .card__input-note {
+    font-size: 12px;
+  }
+  .card__question {
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
+}
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+  }
+  .card__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .card__content > *:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .card__left {
+    margin-right: 0px;
+  }
+  .card__test-wrap {
+    margin-bottom: 30px;
+  }
+  .card__input-note {
+    font-size: 14px;
+  }
+  .card__question {
+    margin-bottom: 20px;
+  }
+  .card__right > *:not(:last-child) {
+    margin-right: 30px;
+  }
+  .card-result__inner {
+    margin-bottom: 30px;
+  }
   .card-result {
     padding-top: 30px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .card-result__inner {
-    margin-bottom: 30px;
   }
   .card-result__title {
     font-size: 25px;
