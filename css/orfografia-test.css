@@ -962,7 +962,6 @@ body._lock {
   background-color: #D37C54;
   padding: 10px;
   color: #f5f5f5;
-  cursor: pointer;
 }
 
 .card__button {
@@ -983,7 +982,6 @@ body._lock {
   color: #f5f5f5;
   font-family: "Inter-Medium";
   border-radius: 10px;
-  cursor: pointer;
   margin-bottom: 0;
   margin-top: auto;
 }
