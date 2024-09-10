@@ -804,7 +804,7 @@ body._lock {
 }
 
 .card__question {
-  font-family: "Inter-Light";
+  font-family: "Inter-Regular";
   font-size: 16px;
   width: 200px;
   margin-bottom: 40px;
@@ -819,7 +819,7 @@ body._lock {
 }
 
 .card__description {
-  font-family: "Inter-Light";
+  font-family: "Inter-Regular";
   margin-bottom: 60px;
 }
 
@@ -1064,6 +1064,11 @@ body._lock {
   }
   .card {
     padding: 20px;
+  }
+  .card__content {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
   .card__word {
     margin-bottom: 15px;
