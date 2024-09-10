@@ -439,9 +439,9 @@ body._lock {
 
 .icon-close-1 {
   position: absolute;
-  right: 10px;
-  top: 10px;
-  font-size: 20px;
+  right: 0px;
+  top: 9px;
+  font-size: 25px;
 }
 
 .form-entrance {
@@ -731,6 +731,47 @@ body._lock {
   padding-bottom: 50px;
 }
 
+.quote {
+  max-width: 700px;
+  margin: 0px auto;
+  font-family: "Inter-LightItalic";
+  font-size: 24px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.quote__img {
+  position: relative;
+  margin-right: 50px;
+  width: 120px;
+  height: 149px;
+}
+.quote__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.quote__words {
+  max-width: 400px;
+  margin: 0px auto 50px;
+  line-height: 130%;
+}
+
+.quote__author {
+  text-align: right;
+}
+
 .card {
   max-width: 700px;
   margin: 0px auto;
@@ -773,9 +814,13 @@ body._lock {
 .card__word {
   font-family: "Inter-Light";
   font-size: 24px;
-  margin-bottom: 80px;
+  margin-bottom: 10px;
   letter-spacing: 12px;
-  cursor: pointer;
+}
+
+.card__description {
+  font-family: "Inter-Light";
+  margin-bottom: 60px;
 }
 
 .card__button {
@@ -1001,12 +1046,25 @@ body._lock {
   }
 }
 @media (max-width: 600px) {
+  .quote__img {
+    width: 50px;
+    height: 62px;
+  }
+  .quote__words {
+    max-width: 300px;
+    margin: 0px auto 20px;
+    line-height: 130%;
+    font-size: 16px;
+  }
+  .quote__author {
+    font-size: 18px;
+  }
   .card {
     padding: 20px;
   }
   .card__word {
-    margin-bottom: 70px;
     text-align: center;
+    margin-bottom: 15px;
   }
   .card__right > *:not(:last-child) {
     margin-right: 30px;
@@ -1037,5 +1095,10 @@ body._lock {
   }
   .card-result__number {
     font-size: 36px;
+  }
+}
+@media (max-width: 400px) {
+  .quote__words {
+    max-width: 230px;
   }
 }
