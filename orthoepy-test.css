@@ -664,9 +664,6 @@ body._lock {
   .menu__item:not(:last-child) {
     margin-right: 50px;
   }
-  .form-registration-placeholder {
-    font-size: 10px;
-  }
 }
 @media (max-width: 600px) {
   .header__content {
@@ -746,6 +743,9 @@ body._lock {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-bottom: 5px solid #125A96;
+  border-radius: 20%;
+  padding: 50px 0;
 }
 
 .quote__img {
@@ -802,25 +802,26 @@ body._lock {
 .card__left {
   margin-right: 20px;
 }
+.card__left > *:not(:last-child) {
+  margin-bottom: 50px;
+}
 
 .card__question {
   font-family: "Inter-Light";
   font-size: 16px;
   width: 200px;
-  margin-bottom: 40px;
   line-height: 130%;
 }
 
 .card__word {
   font-family: "Inter-Light";
   font-size: 24px;
-  margin-bottom: 10px;
   letter-spacing: 12px;
+  margin-bottom: 15px;
 }
 
 .card__description {
-  font-family: "Inter-Light";
-  margin-bottom: 60px;
+  font-family: "Inter-Regular";
 }
 
 .card__button {
@@ -1025,11 +1026,11 @@ body._lock {
   .card__word {
     cursor: pointer;
   }
+  .card__button {
+    cursor: pointer;
+  }
 }
 @media (max-width: 800px) {
-  .page {
-    padding-top: 50px;
-  }
   .card {
     padding: 50px 30px 30px;
   }
@@ -1045,6 +1046,12 @@ body._lock {
   }
 }
 @media (max-width: 600px) {
+  .page {
+    padding-top: 20px;
+  }
+  .quote {
+    padding: 30px 10px;
+  }
   .quote__img {
     width: 50px;
     height: 62px;
@@ -1062,8 +1069,15 @@ body._lock {
   .card {
     padding: 20px;
   }
+  .card__question {
+    text-align: left;
+  }
   .card__word {
     margin-bottom: 15px;
+    text-align: center;
+  }
+  .card__button {
+    margin: 0px auto;
   }
   .card__right > *:not(:last-child) {
     margin-right: 30px;
@@ -1097,7 +1111,13 @@ body._lock {
   }
 }
 @media (max-width: 400px) {
+  .page {
+    padding-top: 0px;
+  }
   .quote__words {
     max-width: 230px;
+  }
+  .card__left {
+    width: 100%;
   }
 }
