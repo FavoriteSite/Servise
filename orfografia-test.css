@@ -783,7 +783,7 @@ body._lock {
 
 .rule__block-item {
   font-size: 16px;
-  font-family: "Inter-Regular";
+  font-family: "Inter-Light";
   line-height: 130%;
 }
 .rule__block-item:not(:last-child) {
@@ -1200,9 +1200,6 @@ body._lock {
   .rule__block-title {
     font-size: 16px;
     margin-bottom: 15px;
-  }
-  .rule__block-item {
-    font-size: 14px;
   }
   .card__left {
     margin-right: 20px;
