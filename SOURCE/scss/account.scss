@@ -1,0 +1,297 @@
+// Основные стили 
+html,
+body {
+  font-weight: 400;
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  color: #1a1a1a;
+  font-family: "Inter-Regular";
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: 1820px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+
+body._hidden {
+  overflow: hidden;
+}
+
+@media(min-width: 1100px) {
+  .link:hover {
+    text-decoration: underline;
+  }
+}
+
+@import "header";
+
+.page {
+  padding: 0 0 40px;
+}
+
+.page__subscription {}
+
+.subscription {}
+
+.subscription__content {
+  max-width: 800px;
+  margin: 0px auto;
+}
+
+.subscription__text {
+  margin-bottom: 100px;
+
+  >*:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.subscription__text-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subscription__text-item {
+  >*:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 300px;
+  }
+}
+
+.subscription__text-title {
+  font-size: 25px;
+  line-height: 130%;
+  padding: 15px 0;
+}
+
+.title-not-active {
+  color: brown;
+  font-family: "Inter-Medium";
+}
+
+.title-active {
+  font-size: 18px;
+  background-color: #3c7c1f;
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+}
+
+.subscription__text-name {
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.subscription__text-description {
+  font-family: "Inter-Light";
+  font-size: 20px;
+  line-height: 130%;
+}
+
+.subscription__text-note {
+  font-size: 16px;
+  max-width: 500px;
+}
+
+.subscription__text-button {
+  font-size: 18px;
+  background-color: #3c7c1f;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.subscription__text-block-button {
+  >*:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.form-recover {
+  max-width: 300px;
+  margin: 0px auto;
+  display: none
+}
+
+.subscription__form {
+  width: 200px;
+
+  &:not(:last-child) {
+    margin-bottom: 100px;
+  }
+
+  >*:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.subscription__form-title {
+  font-size: 20px;
+  display: block;
+  cursor: pointer;
+  background-color: transparent;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+.subscription__form-input {
+  width: 100%;
+  border: 1px solid #3A5EA5;
+  font-size: 16px;
+  padding: 15px;
+  background-color: transparent;
+  border-radius: 5px;
+  color: #1a1a1a;
+
+  &:focus {
+    outline: solid #3A5EA5 1px;
+  }
+
+  &::placeholder {
+    font-size: 14px;
+  }
+}
+
+.subscription__form-button {
+  font-size: 18px;
+  background-color: #3A5EA5;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+@media(min-width: 1100px) {
+  .subscription__text-button {
+    transition: all 0.5s ease 0s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #529234;
+    }
+  }
+}
+
+@import "footer";
+
+@media(max-width: 800px) {
+  .page {
+    padding: 0 0 40px;
+  }
+
+  .subscription__form {
+    &:not(:last-child) {
+      margin-bottom: 70px;
+    }
+  }
+
+  .subscription__text-item {
+    &:not(:last-child) {
+      margin-right: 100px;
+    }
+  }
+}
+
+@media(max-width: 600px) {
+  .page {
+    padding: 40px 0;
+  }
+
+  .subscription__text {
+    margin-bottom: 70px;
+  }
+
+  .subscription__text-item {
+    width: 140px;
+
+    >*:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  .subscription__text-title {
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  .subscription__text-name {
+    font-size: 16px;
+  }
+
+  .subscription__text-description {
+    font-size: 16px;
+    line-height: 200%;
+  }
+
+  .subscription__text-note {
+    font-size: 14px;
+  }
+}
