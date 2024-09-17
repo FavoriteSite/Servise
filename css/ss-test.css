@@ -664,9 +664,6 @@ body._lock {
   .menu__item:not(:last-child) {
     margin-right: 50px;
   }
-  .form-registration-placeholder {
-    font-size: 10px;
-  }
 }
 @media (max-width: 600px) {
   .header__content {
@@ -1044,6 +1041,10 @@ body._lock {
   }
   .card__buttons > *:not(:last-child) {
     margin-right: 20px;
+  }
+  .card__button {
+    width: 200px;
+    min-height: 50px;
   }
   .card__right > *:not(:last-child) {
     margin-right: 30px;

@@ -664,9 +664,6 @@ body._lock {
   .menu__item:not(:last-child) {
     margin-right: 50px;
   }
-  .form-registration-placeholder {
-    font-size: 10px;
-  }
 }
 @media (max-width: 600px) {
   .header__content {
@@ -1204,9 +1201,6 @@ body._lock {
     font-size: 16px;
     margin-bottom: 15px;
   }
-  .rule__block-item {
-    font-size: 14px;
-  }
   .card__left {
     margin-right: 20px;
   }
@@ -1223,9 +1217,6 @@ body._lock {
   }
   .card__button {
     width: 180px;
-    min-height: 40px;
-    padding: 10px;
-    font-size: 16px;
   }
   .card__right > *:not(:last-child) {
     margin-right: 20px;
@@ -1264,14 +1255,12 @@ body._lock {
         -ms-flex-align: start;
             align-items: start;
   }
-  .card__content > *:not(:last-child) {
-    margin-bottom: 30px;
-  }
   .card__left {
     margin-right: 0px;
+    margin-bottom: 50px;
   }
   .card__test-wrap {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   .card__input-note {
     font-size: 14px;

@@ -664,9 +664,6 @@ body._lock {
   .menu__item:not(:last-child) {
     margin-right: 50px;
   }
-  .form-registration-placeholder {
-    font-size: 10px;
-  }
 }
 @media (max-width: 600px) {
   .header__content {
@@ -1034,9 +1031,6 @@ body._lock {
   }
 }
 @media (max-width: 800px) {
-  .page {
-    padding-top: 50px;
-  }
   .card {
     padding: 50px 30px 30px;
   }
@@ -1052,6 +1046,9 @@ body._lock {
   }
 }
 @media (max-width: 600px) {
+  .page {
+    padding-top: 20px;
+  }
   .quote {
     padding: 30px 10px;
   }
@@ -1114,6 +1111,9 @@ body._lock {
   }
 }
 @media (max-width: 400px) {
+  .page {
+    padding-top: 0px;
+  }
   .quote__words {
     max-width: 230px;
   }

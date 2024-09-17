@@ -670,9 +670,6 @@ body._lock {
   .menu__item:not(:last-child) {
     margin-right: 50px;
   }
-  .form-registration-placeholder {
-    font-size: 10px;
-  }
 }
 @media (max-width: 600px) {
   .header__content {
